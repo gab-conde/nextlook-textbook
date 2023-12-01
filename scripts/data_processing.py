@@ -15,3 +15,5 @@ def process_book_data():
     # Remove duplicate textbooks from the dataframe
     book_data.drop_duplicates(subset='title', keep='first', inplace=True)
     book_data.drop_duplicates(subset='ISBN', keep='first', inplace=True)
+
+    book_data.to_json('datasets/book_data.json')
