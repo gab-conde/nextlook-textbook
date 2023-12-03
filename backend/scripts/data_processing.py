@@ -7,7 +7,6 @@ def clean_book_data() -> pd.DataFrame:
 
     # Filter the dataframe to exclude non-vital columns
     book_columns = ['ISBN', 'title', 'edition', 'publisher']
-    # book_columns = ['title', 'edition', 'publisher', 'ISBN']
     book_data = book_data[book_columns]
 
     # Remove rows with missing data
