@@ -2,8 +2,8 @@
 class Book:
 
     # Constructor
-    def __init__(self, title, edition, publisher, ISBN) -> None:
+    def __init__(self, ISBN, title, edition, publisher) -> None:
+        self.ISBN = ISBN
         self.title = title
         self.editiion = edition
         self.publisher = publisher
-        self.ISBN = ISBN
