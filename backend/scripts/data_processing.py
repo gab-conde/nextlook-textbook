@@ -13,7 +13,6 @@ def clean_book_data() -> pd.DataFrame:
     book_data.dropna(axis='index', how='any', inplace=True)
 
     # Remove duplicate textbooks from the dataframe
-    book_data.drop_duplicates(subset='title', keep='first', inplace=True)
-    book_data.drop_duplicates(subset='ISBN', keep='first', inplace=True)
+    book_data = book_data.drop_duplicates(subset=['title', 'ISBN'])
 
     return book_data
