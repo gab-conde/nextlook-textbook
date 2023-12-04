@@ -4,12 +4,12 @@
   "author": "Ionic Framework",
   "homepage": "https://ionicframework.com/",
   "scripts": {
-    "ng": "frontend/node_modules/.bin/ng",
-    "start": "frontend/node_modules/.bin/ng serve",
-    "build": "frontend/node_modules/.bin/ng build",
-    "watch": "frontend/node_modules/.bin/ng build --watch --configuration development",
-    "test": "frontend/node_modules/.bin/ng test",
-    "lint": "frontend/node_modules/.bin/ng lint"
+    "ng": "node_modules/.bin/ng",
+    "start": "node_modules/.bin/ng serve",
+    "build": "node_modules/.bin/ng build",
+    "watch": "node_modules/.bin/ng build --watch --configuration development",
+    "test": "node_modules/.bin/ng test",
+    "lint": "node_modules/.bin/ng lint"
   },
   "private": true,
   "dependencies": {
