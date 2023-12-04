@@ -1,11 +1,11 @@
 from flask import Flask
-from dotenv import load_dotenv
+# from dotenv import load_dotenv
 
 from models.Book import Book
 from scripts import data_processing
 
 # Load environment variables
-load_dotenv()
+# load_dotenv()
 
 # Create app
 app = Flask(__name__)
@@ -13,8 +13,8 @@ app = Flask(__name__)
 # Create DataFrame from book data
 book_df = data_processing.clean_book_data()
 
-# Create a set to hold books
-books = set()
+# Create a dictionary to hold books
+books = {}
 
 # Create an adjacency list for resources
 graph = {}
@@ -22,7 +22,7 @@ graph = {}
 # Create book objects and add to graph
 for row in book_df.itertuples(index=False, name=None):
     book_n = Book(row[0], row[1], row[2], row[3])
-    books.add(book_n)
+    books[book_n.ISBN] = book_n
     for topic in book_n.topics:
         if topic in graph:
             related_books = graph[topic]
