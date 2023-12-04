@@ -12,6 +12,9 @@ def clean_book_data() -> pd.DataFrame:
     # Remove rows with missing data
     book_data.dropna(axis='index', how='any', inplace=True)
 
+    # Remove text within parentheses from titles
+    book_data['title'] = book_data['title'].str.replace(r"\(.*?\)", "", regex=True).str.strip()
+
     # Remove duplicate textbooks from the dataframe
     book_data = book_data.drop_duplicates(subset=['title', 'ISBN'])
 
