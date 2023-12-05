@@ -1,3 +1,30 @@
 <ion-app>
   <ion-router-outlet></ion-router-outlet>
+
+  <!-- Title -->
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>
+        NextLook TextBook
+      </ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--  Textbook Search Bar-->
+  <ion-searchbar placeholder="Textbook Title/ISBN"></ion-searchbar>
+
+  <!--BFS and DFS Button -->
+  <ion-segment color="tertiary" value="tertiary">
+    <ion-segment-button value="tertiary">
+      <ion-label>BFS</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="segment">
+      <ion-label>DFS</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+  <ion-content>
+    <svg id="graph"></svg>
+  </ion-content>
+
 </ion-app>
