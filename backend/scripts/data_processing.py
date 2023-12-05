@@ -1,7 +1,7 @@
 import pandas as pd
 
-def clean_book_data() -> pd.DataFrame:
 
+def clean_book_data() -> pd.DataFrame:
     # Convert the csv to a dataframe
     book_data = pd.read_csv('datasets/BNTextbook_2022-02-05.csv')
 

@@ -7,6 +7,7 @@ load_dotenv(find_dotenv())
 
 API_KEY = os.environ.get("API_KEY")
 
+
 # Book resource
 class Book:
 
@@ -46,4 +47,6 @@ class Book:
 
     # Custom print function
     def __str__(self):
-        return "ISBN: " + str(int(self.ISBN)) + " Title: " + self.title + " Edition: " + self.edition + " Publisher: " + self.publisher + " Categories: " + str(self.topics)
+        return "ISBN: " + str(
+            int(self.ISBN)) + " Title: " + self.title + " Edition: " + self.edition + " Publisher: " + self.publisher + " Categories: " + str(
+            self.topics)
