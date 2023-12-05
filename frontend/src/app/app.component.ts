@@ -1,6 +1,6 @@
 import { Component, AfterViewInit } from '@angular/core';
-// import * as d3 from 'd3';
 import { IonApp, IonRouterOutlet, IonSearchbar, IonSegment, IonSegmentButton, IonLabel, IonContent, IonHeader, IonToolbar, IonTitle } from '@ionic/angular/standalone';
+// import * as d3 from 'd3';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +11,8 @@ import { IonApp, IonRouterOutlet, IonSearchbar, IonSegment, IonSegmentButton, Io
 export class AppComponent {
   constructor() {}
 }
-// Visualization of with physics to be implemented later
+
+// Visualization of graph with physics to be implemented later
 // // Define interfaces for Node and Link
 // interface Node {
 //   id: string;
@@ -107,6 +108,3 @@ export class AppComponent {
 //     });
 //   }
 // }
-
-
-
